@@ -1,5 +1,5 @@
 #LOGICAL OPERATOR IN MYSQL HERE IS THREE TYPES OF OPREATORS 1. LOGICAL OPERATOR 2. COMPARSION OPRETORS AND 3. SPECAIL OPERATORS
-USE COMPANY;
+USE COMPANY; # please use any table.
 select * from  employees_details where first_name = "rakhi" and last_name = "sawant";
 select * from employees_Details;
 select * from employees_Details  where first_name = "rakhi" or frist_name = " hathway";
