@@ -1,0 +1,23 @@
+#How to import CSV file? 
+#Select or create database in your mysql workbench and right click on that selected database > select the "table data import wizard" > then select your CSV file from your device.
+SHOW databases;
+USE projects;
+select * from data_scientist;
+# 1. Write the qurey to get the employment_type & job_title from data_Scientist table.
+select employment_type, job_title from data_scientist;
+#Write the query whoes salary lies between 20000 to 260000.
+select * from data_scientist where salary between 20000 and 260000;
+#Write the qurey in which employment_type start with the letter of "A".
+select job_title from data_scientist where job_title like "A%";
+#Write the qurey to show maximum and salary and minimun salary from data_Scientist.
+select max(Salary), min(Salary) , job_title from data_scientist;
+#Write the qurey to find 3rd highest salary from data_scientist wihtout use of limit keyword.
+select salary from data_scientist as D1
+WHERE 3-1 = (Select count(distinct salary) from data_scientist as D2 where D2.salary> D1.salary);
+#Write the query to show the top max salary from data_scientist 
+select max(salary) from data_scientist;
+#Write the qurey to show salary less then Max salary.
+select *  from data_scientist where salary not in (select max(salary) from  data_scientist);
+#Write the query to show highest three  salary from data_Scientist.
+select salary from data_scientist order by (salary) desc limit 3;
+#I HOPE THESE ALL QURIES WILL BE HELP TO ANAYSLSES YOUR DATA.
